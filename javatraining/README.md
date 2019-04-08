@@ -1,6 +1,8 @@
 ### Web applications JAVA development training
-####EPAM, Homel, Spring 2019
-#####Dzianis Tikhamirau, variant #6
+
+#### EPAM, Homel, Spring 2019
+
+##### Dzianis Tikhamirau, variant #6
 
 Описание предметной области:
 ```
