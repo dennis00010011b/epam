@@ -18,9 +18,10 @@ import java.util.Objects;
 public class Agent extends Person implements Tourable {
 
   public List<TravelAgency> travelAgencies;
+  private float bankAccount;
 
   /**
-   * Constructs {@code Agent} object with {@code phoneNumber}, {@code lastName},{@code firstName}
+   * Constructs {@code Agent} object with {@code phoneNumber}, {@code lastName}, {@code firstName}
    *
    * @param phoneNumber a String
    * @param lastName a String
@@ -37,11 +38,13 @@ public class Agent extends Person implements Tourable {
    * @param lastName a String
    * @param firstName a String
    * @param travelAgencies a List of TravelAgency
+   * @param bankAccount a float
    */
   public Agent(String phoneNumber, String lastName, String firstName,
-      List<TravelAgency> travelAgencies) {
+      List<TravelAgency> travelAgencies, float bankAccount) {
     super(phoneNumber, lastName, firstName);
     this.travelAgencies = travelAgencies;
+    this.bankAccount = bankAccount;
   }
 
   /**
@@ -54,7 +57,8 @@ public class Agent extends Person implements Tourable {
   public String toString() {
     return "Agent{" +
         super.toString() +
-        " ,travelAgencies=" + travelAgencies +
+        ", travelAgencies=" + travelAgencies +
+        ", bankAccount=" + bankAccount +
         '}';
   }
 
