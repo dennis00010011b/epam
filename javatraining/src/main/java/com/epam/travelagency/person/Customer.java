@@ -132,7 +132,7 @@ public class Customer extends Person implements Tourable {
    * Pay for travel tour to agent
    *
    * @param agent a Agent
-   * @return {@code true} if payment was succesfull, otherwise return {@false}
+   * @return {@code true} if payment was succesfull, otherwise return {@code false}
    */
   public boolean pay(Agent agent) {
     return false;
