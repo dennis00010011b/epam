@@ -173,4 +173,5 @@ public abstract class Tour {
   public int hashCode() {
     return Objects.hash(id, price, startDate, endDate, rating, isHot);
   }
+
 }

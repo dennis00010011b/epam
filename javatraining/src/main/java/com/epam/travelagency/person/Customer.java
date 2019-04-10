@@ -1,6 +1,7 @@
 package com.epam.travelagency.person;
 
 import com.epam.travelagency.tour.Tour;
+import com.epam.travelagency.tour.Tourable;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,7 @@ import java.util.Objects;
  * @version 1.0
  * @since 2019-04-09
  */
-public class Customer extends Person {
+public class Customer extends Person implements Tourable {
 
   private List<Tour> tours;
   private boolean isRegular;
@@ -72,6 +73,7 @@ public class Customer extends Person {
   public void setRegular(boolean regular) {
     isRegular = regular;
   }
+
   /**
    * Getter for {@code discount} private field
    *
@@ -80,6 +82,7 @@ public class Customer extends Person {
   public float getDiscount() {
     return discount;
   }
+
   /**
    * Setter for {@code discount} private field
    *
@@ -114,11 +117,24 @@ public class Customer extends Person {
     return Objects.hash(super.hashCode(), tours, isRegular, discount);
   }
 
-  public Tour selectTour(String destination, Date startDate, int duration) {
+  /**
+   * Find Tour object with given parameters
+   *
+   * @param destination a String
+   * @param startDate a Date
+   * @return {@code Tour}
+   */
+  public Tour findTour(String destination, Date startDate) {
     return null;
   }
 
-  public void pay(Tour tour) {
-
+  /**
+   * Pay for travel tour to agent
+   *
+   * @param agent a Agent
+   * @return {@code true} if payment was succesfull, otherwise return {@false}
+   */
+  public boolean pay(Agent agent) {
+    return false;
   }
 }

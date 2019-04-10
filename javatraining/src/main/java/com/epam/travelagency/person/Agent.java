@@ -2,6 +2,8 @@ package com.epam.travelagency.person;
 
 import com.epam.travelagency.agency.TravelAgency;
 import com.epam.travelagency.tour.Tour;
+import com.epam.travelagency.tour.Tourable;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -13,7 +15,7 @@ import java.util.Objects;
  * @version 1.0
  * @since 2019-04-09
  */
-public class Agent extends Person {
+public class Agent extends Person implements Tourable {
 
   public List<TravelAgency> travelAgencies;
 
@@ -65,13 +67,52 @@ public class Agent extends Person {
     return Objects.hash(super.hashCode(), travelAgencies);
   }
 
+  /**
+   * Find Tour object with given parameters
+   *
+   * @param destination a String
+   * @param startDate a Date
+   * @return {@code Tour}
+   */
+  public Tour findTour(String destination, Date startDate) {
+    return null;
+  }
+
+  /**
+   * Assign <tt> Hot </tt> status to a Tour object
+   *
+   * @param tour a Tour
+   */
   public void setHotTour(Tour tour) {
 
   }
 
-  public void setDiscount(Customer customer) {
+  /**
+   * Set personal discount for the Customer
+   *
+   * @param customer a Customer
+   */
+  public void setDiscountCustomer(Customer customer) {
 
   }
 
+  /**
+   * Set the Customer as a regular customer
+   *
+   * @param customer a Customer
+   */
+  public void setRegularCustomer(Customer customer) {
+
+  }
+
+  /**
+   * send the bill to the customer
+   *
+   * @param amount a float
+   * @param customer a Customer
+   */
+  public void sendBill(float amount, Customer customer) {
+
+  }
 
 }
