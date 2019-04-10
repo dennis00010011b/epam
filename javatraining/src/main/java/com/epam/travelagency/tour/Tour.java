@@ -38,6 +38,7 @@ public abstract class Tour {
     this.rating = rating;
     this.isHot = isHot;
   }
+
   /**
    * Getter for {@code id} private field
    *
@@ -46,6 +47,7 @@ public abstract class Tour {
   public int getId() {
     return id;
   }
+
   /**
    * Setter for {@code id} private field
    *
@@ -143,5 +145,32 @@ public abstract class Tour {
    */
   public void setRating(byte rating) {
     this.rating = rating;
+  }
+
+  /**
+   * Returns {@code String} representation of Tour object
+   *
+   * @return the result of calling {@code toString} for a non-{@code null} argument and {@code
+   * "null"} for a {@code null} argument
+   */
+  @Override
+  public String toString() {
+    return "Tour{" +
+        "id=" + id +
+        ", price=" + price +
+        ", startDate=" + startDate +
+        ", endDate=" + endDate +
+        ", rating=" + rating +
+        ", isHot=" + isHot +
+        '}';
+  }
+
+  /**
+   * @return the hash code of a non-{@code null} argument and 0 for a {@code null} argument
+   * @see Object#hashCode
+   */
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, price, startDate, endDate, rating, isHot);
   }
 }

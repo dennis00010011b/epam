@@ -99,7 +99,7 @@ public class Customer extends Person {
   public String toString() {
     return "Customer{" +
         super.toString() +
-        "tours=" + tours +
+        ", tours=" + tours +
         ", isRegular=" + isRegular +
         ", discount=" + discount +
         '}';
