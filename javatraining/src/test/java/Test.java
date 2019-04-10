@@ -19,7 +19,9 @@ public class Test {
 
     //Agent agent = new Agent("123123","Ivanov","212-34-56");
 
-
+    Customer c1 = new Customer("123123","Ivanov","212-34-56");
+    Customer c2 = new Customer("123123","Ivanov","212-34-56");
+    System.out.println(c1==c2);
   }
 
 }

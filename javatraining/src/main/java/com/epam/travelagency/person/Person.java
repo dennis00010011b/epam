@@ -99,28 +99,7 @@ public class Person {
   }
 
   /**
-   * Compare two Person's objects
-   *
-   * @param o an object
-   * @return {@code true} if both objects have all fields with the same values and {@code false}
-   * otherwise
-   */
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    Person person = (Person) o;
-    return Objects.equals(phoneNumber, person.phoneNumber) &&
-        Objects.equals(lastName, person.lastName) &&
-        Objects.equals(firstName, person.firstName);
-  }
-
-  /**
-   * @return he hash code of a non-{@code null} argument and 0 for a {@code null} argument
+   * @return the hash code of a non-{@code null} argument and 0 for a {@code null} argument
    * @see Object#hashCode
    */
   @Override
