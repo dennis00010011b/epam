@@ -15,6 +15,7 @@ import java.util.Objects;
  */
 public class TravelAgency {
 
+  public int id;
   public List<Agent> agents;
   public List<Customer> customers;
   public List<Tour> tours;
@@ -26,8 +27,9 @@ public class TravelAgency {
    * @param customers a List of Customers
    * @param tours a List of Tours
    */
-  public TravelAgency(List<Agent> agents,
+  public TravelAgency(int id, List<Agent> agents,
       List<Customer> customers, List<Tour> tours) {
+    this.id = id;
     this.agents = agents;
     this.customers = customers;
     this.tours = tours;
