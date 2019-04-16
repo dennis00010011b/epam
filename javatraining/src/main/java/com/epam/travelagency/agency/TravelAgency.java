@@ -36,6 +36,78 @@ public class TravelAgency {
   }
 
   /**
+   * Getter for {@code id} private field
+   *
+   * @return {@code int id}
+   */
+  public int getId() {
+    return id;
+  }
+
+  /**
+   * Setter for {@code id} private field
+   *
+   * @param id a int
+   */
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  /**
+   * Getter for {@code agents} private field
+   *
+   * @return {@code List<Agent> agents}
+   */
+  public List<Agent> getAgents() {
+    return agents;
+  }
+
+  /**
+   * Setter for {@code agents} private field
+   *
+   * @param agents a List<Agent>
+   */
+  public void setAgents(List<Agent> agents) {
+    this.agents = agents;
+  }
+
+  /**
+   * Getter for {@code customers} private field
+   *
+   * @return {@code List<Customer> customers}
+   */
+  public List<Customer> getCustomers() {
+    return customers;
+  }
+
+  /**
+   * Setter for {@code customers} private field
+   *
+   * @param customers a List<Customer>
+   */
+  public void setCustomers(List<Customer> customers) {
+    this.customers = customers;
+  }
+
+  /**
+   * Getter for {@code tours} private field
+   *
+   * @return {@code List<Tour> tours}
+   */
+  public List<Tour> getTours() {
+    return tours;
+  }
+
+  /**
+   * Setter for {@code tours} private field
+   *
+   * @param tours a List<Tour>
+   */
+  public void setTours(List<Tour> tours) {
+    this.tours = tours;
+  }
+
+  /**
    * @return the hash code of a non-{@code null} argument and 0 for a {@code null} argument
    * @see Object#hashCode
    */
