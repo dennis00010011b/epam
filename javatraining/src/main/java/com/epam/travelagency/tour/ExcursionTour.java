@@ -30,6 +30,42 @@ public class ExcursionTour extends Tour {
   }
 
   /**
+   * Getter for {@code destinations} private field
+   *
+   * @return {@code destinations}
+   */
+  public List<String> getDestinations() {
+    return destinations;
+  }
+
+  /**
+   * Setter for {@code destinations} private field
+   *
+   * @param destinations a List of String
+   */
+  public void setDestinations(List<String> destinations) {
+    this.destinations = destinations;
+  }
+
+  /**
+   * Getter for {@code showplaces} private field
+   *
+   * @return {@code showplaces}
+   */
+  public List<String> getShowplaces() {
+    return showplaces;
+  }
+
+  /**
+   * Setter for {@code showplaces} private field
+   *
+   * @param showplaces a List of String
+   */
+  public void setShowplaces(List<String> showplaces) {
+    this.showplaces = showplaces;
+  }
+
+  /**
    * Returns {@code String} representation of ExcursionTour object
    *
    * @return the result of calling {@code toString} for a non-{@code null} argument and {@code
