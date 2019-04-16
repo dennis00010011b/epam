@@ -6,8 +6,8 @@ import java.util.Objects;
 
 public class ExcursionTour extends Tour {
 
-  public List<String> destinations;
-  public List<String> showplaces;
+  private List<String> destinations;
+  private List<String> showplaces;
 
   /**
    * Constructs {@code ShoppingTour} object
