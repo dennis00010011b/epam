@@ -15,10 +15,10 @@ import java.util.Objects;
  */
 public class TravelAgency {
 
-  public int id;
-  public List<Agent> agents;
-  public List<Customer> customers;
-  public List<Tour> tours;
+  private int id;
+  private List<Agent> agents;
+  private List<Customer> customers;
+  private List<Tour> tours;
 
   /**
    * Constructs {@code Person} object with {@code phoneNumber}, {@code lastName},{@code firstName}
