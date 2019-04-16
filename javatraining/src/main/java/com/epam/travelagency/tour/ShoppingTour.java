@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class ShoppingTour extends Tour {
 
-  public List<String> shops;
+  private List<String> shops;
 
   /**
    * Constructs {@code ShoppingTour} object
