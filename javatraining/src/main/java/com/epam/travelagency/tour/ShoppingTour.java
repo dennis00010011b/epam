@@ -26,6 +26,24 @@ public class ShoppingTour extends Tour {
   }
 
   /**
+   * Getter for {@code shops} private field
+   *
+   * @return {@code shops}
+   */
+  public List<String> getShops() {
+    return shops;
+  }
+
+  /**
+   * Setter for {@code shops} private field
+   *
+   * @param shops a List of String
+   */
+  public void setShops(List<String> shops) {
+    this.shops = shops;
+  }
+
+  /**
    * Returns {@code String} representation of ShoppingTour object
    *
    * @return the result of calling {@code toString} for a non-{@code null} argument and {@code
