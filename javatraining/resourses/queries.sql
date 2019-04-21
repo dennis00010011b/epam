@@ -128,31 +128,89 @@ ALTER TABLE public.agents
     ADD CONSTRAINT agents_person_fkey FOREIGN KEY (person)
     REFERENCES public.persons (phonenumber) MATCH SIMPLE
     ON UPDATE CASCADE
-    ON DELETE CASCADE;
+    ON DELETE CASCADE
 
 ALTER TABLE public.customers
     ADD CONSTRAINT customers_person_fkey FOREIGN KEY (person)
     REFERENCES public.persons (phonenumber) MATCH SIMPLE
     ON UPDATE CASCADE
-    ON DELETE CASCADE;
+    ON DELETE CASCADE
 
 ALTER TABLE public.excursiontours
     ADD CONSTRAINT excursiontours_showplace1_fkey FOREIGN KEY (showplace1)
     REFERENCES public.showplaces (showplace) MATCH SIMPLE
     ON UPDATE CASCADE
-    ON DELETE CASCADE;
+    ON DELETE CASCADE
 
 UPDATE persons
 SET phonenumber='+375290001122'
 WHERE firstname='Griboedov'
 
-UPDATE persons
-SET phonenumber='+375290001122'
-WHERE firstname='Griboedov'
+UPDATE agents
+SET bankaccount='131313
+WHERE person='1'
 
+UPDATE customers
+SET tour3='Gold sand'
+WHERE person='3'
+
+UPDATE tours
+SET name='Terskol'
+WHERE name = 'Elbrus'
+
+UPDATE excursiontours
+SET showplace1='Luvr'
+WHERE showplace1 = 'NotrDame'
+
+UPDATE shoopingtours
+SET shop1='Almi'
+WHERE shop1 = 'Walmart'
+
+UPDATE resorttours
+SET tour='Nalchik'
+WHERE tour = 'Minvody'
+
+UPDATE places
+SET place='Seattle'
+WHERE place = 'NewYork'
+
+UPDATE shops
+SET shop='Fredmeyer'
+WHERE shop = 'Walmart'
+
+UPDATE showplaces
+SET showplace='NotrDame'
+WHERE showplace = 'Luvr'
 
 // DELETE  queries
 
 DELETE FROM persons
 WHERE firstname='Griboedov'
+
+DELETE FROM agents
+WHERE person='1'
+
+DELETE FROM customers
+WHERE tour3='Gold sand'
+
+DELETE FROM tours
+WHERE name = 'Elbrus'
+
+DELETE FROM excursiontours
+WHERE showplace1 = 'NotrDame'
+
+DELETE FROM shoopingtours
+WHERE shop1 = 'Walmart'
+
+DELETE FROM resorttours
+WHERE tour = 'Minvody'
+
+DELETE FROM places
+WHERE place = 'NewYork'
+
+DELETE FROM shops
+WHERE shop = 'Walmart'
+
+DELETE FROM showplaces
+WHERE showplace = 'Luvr'
 
