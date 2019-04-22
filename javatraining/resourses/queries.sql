@@ -20,13 +20,19 @@ endDate date,
 rating integer,
 isHot boolean)
 
+CREATE TABLE paidtours(
+name VARCHAR REFERENCES tours,
+price FLOAT,
+startdate DATE,
+enddate DATE,
+rating INTEGER,
+isHot boolean,
+customer VARCHAR REFERENCES customers)
+
+
 CREATE TABLE excursiontours (
 tour VARCHAR REFERENCES tours,
-showplace1 VARCHAR REFERENCES showplaces,
-showplace2 VARCHAR REFERENCES showplaces,
-showplace3 VARCHAR REFERENCES showplaces,
-showplace4 VARCHAR REFERENCES showplaces,
-showplace5 VARCHAR REFERENCES showplaces
+showplaces showplaces[]
 )
 
 CREATE TABLE shoppingtours (
@@ -54,12 +60,7 @@ bankaccount VARCHAR,
 travelagency VARCHAR REFERENCES travelagencies)
 
 CREATE TABLE customers(
-person VARCHAR REFERENCES persons,
-tour1 VARCHAR REFERENCES tours,
-tour2 VARCHAR REFERENCES tours,
-tour3 VARCHAR REFERENCES tours,
-tour4 VARCHAR REFERENCES tours,
-tour5 VARCHAR REFERENCES tours,
+person VARCHAR REFERENCES persons PRIMARY KEY,
 isRegular boolean,
 discount float)
 
@@ -80,8 +81,11 @@ VALUES ('Fish market')
 INSERT INTO tours
 VALUES('Gold ring of Homel',50.4,'2019-05-03','2020-09-08',5,true)
 
-INSERT INTO excursiontours(tour,showplace1,showplace2,showplace3)
-VALUES(	'Gold ring of Homel'','Eifel Tower','Space needle','Bazar')
+INSERT INTO paidtours
+VALUES('Gold ring of Homel',50.4,'2019-05-03','2020-09-08',5,true,’1’)
+
+INSERT INTO excursiontours
+VALUES('Elbrus',array[ROW('Eifel Tower’,’Paris’)::showplaces])
 
 INSERT INTO resorttours
 VALUES('Gold sand','Homel')
@@ -95,8 +99,8 @@ VALUES ('TravelWorld')
 INSERT INTO agents
 VALUES ('+321' ,'12345678987','TravelWorld')
 
-INSERT INTO customers(person,tour1,tour2,isRegular,discount)
-VALUES ('+375298887766','Elbrus','Elbrus',true,0.75)
+INSERT INTO customers(person,isRegular,discount)
+VALUES ('1',true,0.75)
 
 
 // READ queries
@@ -214,3 +218,5 @@ WHERE shop = 'Walmart'
 DELETE FROM showplaces
 WHERE showplace = 'Luvr'
 
+DELETE FROM paidtours
+WHERE name = 'Gold ring of Homel'
