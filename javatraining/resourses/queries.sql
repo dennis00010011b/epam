@@ -37,7 +37,7 @@ showplaces showplaces[]
 
 CREATE TABLE shoppingtours (
 tour VARCHAR REFERENCES tours,
-shop VARCHAR REFERENCES shops
+shop shops[]
 )
 
 CREATE TABLE resorttours (
